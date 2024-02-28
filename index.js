@@ -38,7 +38,7 @@ var indexOfButtons = 0;
 function alternateButtons() {
   indexOfButtons++
   const originalEspecialButtons = ["√", "π", "^", "!"]
-  const otherSpecialButtons = ["³√", "±"]
+  const otherSpecialButtons = ["±"]
   const especialButtonsElements = document.querySelectorAll("button.buttons")
   if (indexOfButtons === 1) {
     otherSpecialButtons.forEach((buttonContent, index) => {
