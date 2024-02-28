@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cdn_modules/fontawesome@6.5.1/css/all.min.css"
+</head>
+
+<body>
+  <br>
+  <input placeholder="0" id="display" disabled>
+  <br>
+  <div id="buttons-container">
+  <button type="button" class="buttons" style="background: grey;" onclick="globalExpression += this.innerHTML">√</button>
+  <button type="button" class="buttons" style="background: grey;" onclick="this.innerHTML !== '±' ? globalExpression += this.innerHTML : invertLastNumberSign();">π</button>
+  <button type="button" class="buttons" style="background: grey;" onclick="globalExpression += this.innerHTML">^</button>
+  <button type="button" class="buttons" style="background: grey;" onclick="globalExpression += this.innerHTML">!</button>
+  <br>
+  <button type="button" class="buttons" onclick="globalExpression = '';">AC</button>
+  <button type="button" class="buttons" onclick="applyParentheses()">( )</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">%</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">÷</button>
+  <br>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">1</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">2</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">3</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">x</button>
+  <br>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">4</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">5</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">6</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">-</button>
+  <br>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">7</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">8</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">9</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">+</button>
+  <br>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">0</button>
+  <button type="button" class="buttons" onclick="globalExpression += this.innerHTML">.</button>
+  <button type="button" class="buttons" onclick="globalExpression = globalExpression.slice(0, -1)">C</button>
+  <button type="button" class="buttons" onclick="calculate(globalExpression)">=</button>
+  <br>
+  <button type="button" class="buttons" style="background: grey;" onclick="alternateButtons()"><i class="fa-solid fa-circle-arrow-up"></i></button>
+  </div>
+  
+  <script src="lib/expression-converter.js"></script>
+  <script src="lib/expression-tokenizer.js"></script>
+  <script src="lib/catch-errors.js"></script>
+  <script src="lib/utils.js"></script>
+  <script src="index.js"></script>
+  <script src="cdn_modules/font-awesome@6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
